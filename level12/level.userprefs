@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MyProject\Scripts\Enemy.cs">
+    <Files>
+      <File FileName="Assets\MyProject\Scripts\Key.cs" Line="28" Column="2" />
+      <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vSimpleDoor.cs" Line="177" Column="5" />
+      <File FileName="Assets\MyProject\Scripts\Enemy.cs" Line="56" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

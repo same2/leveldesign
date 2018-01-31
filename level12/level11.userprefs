@@ -1,0 +1,25 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vGameController.cs">
+    <Files>
+      <File FileName="Assets\MyProject\Scripts\chase.cs" Line="1" Column="1" />
+      <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\Actions\vLadderAction.cs" Line="1" Column="1" />
+      <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vPendulum.cs" Line="1" Column="1" />
+      <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\ObjectDamage\vSpike\vSpikeControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\ObjectDamage\vSpike\vSpike.cs" Line="1" Column="1" />
+      <File FileName="Assets\MyProject\Scripts\Key.cs" Line="1" Column="1" />
+      <File FileName="Assets\MyProject\Scripts\Keycard.cs" Line="1" Column="1" />
+      <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vSimpleDoor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\Actions\vGenericAction.cs" Line="1" Column="1" />
+      <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\CharacterController\vGameController.cs" Line="65" Column="38" />
+      <File FileName="Assets\MyProject\Scripts\GenericTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vChangeScenes.cs" Line="1" Column="1" />
+      <File FileName="Assets\MyProject\Scripts\LoadLevelHook.cs" Line="1" Column="1" />
+      <File FileName="Assets\MyProject\Scripts\UI_Manager.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
