@@ -33,7 +33,6 @@ public class PickUpObject : MonoBehaviour {
 			item.transform.position = guide.transform.position;
 			if (Input.GetMouseButtonDown(1))
 			{
-				Debug.Log("Trying to throw");
 				item.GetComponent<Rigidbody>().AddForce(guide.transform.forward * throwForce);
 				isHolding = false;
 			}
@@ -47,7 +46,6 @@ public class PickUpObject : MonoBehaviour {
 	}
 
 	void OnMouseDown()
-
 	{
 		if (distance <= 1.5f)
 		{
