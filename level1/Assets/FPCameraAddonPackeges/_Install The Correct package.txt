@@ -1,0 +1,177 @@
+Content:
+----------------------------------------------------------------------------------------------------
+- FPCameraAddOnBMS: Addon for Invector Basic, Melee, Shooter Template
+- FPCameraAddOnFREE: Addon for Invector Free Template
+
+
+(Update 05/02/2018)
+- updated documentation file
+- small fixes
+
+(Update 14/01/2018)
+- updated to inVector Template Basic/Melee 2.2.5 & Shooter 1.1.5
+
+(Update 23/12/2017)
+- added support for Camera recoil
+
+(Update 21/12/2017)
+- added manual settings for ExtraCams update mode
+
+(Update 20/12/2017)
+- added option to spawn ExtraCams on start or disable it.
+- now the ExtraCams is disabled after swapping on third camera mode
+- now animator update method is applied to ExtraCams update 
+- added better extra camera smooth option(recommended for shooter)
+- first/third swapping now takes into account the previous direction of the player
+
+(Update 19/12/2017)
+- added again head collision feature.
+
+(Update 14/12/2017)
+- big improvement in smoothing camera and shooter weapons movement.
+- code optimization and cleaning
+- removed head collision feature
+
+(Update 02/12/2017)
+- small changes in inspector
+- added option to select the default Animator Update Mode 
+
+(Update 30/11/2017)
+-  reworked inspector to be aligned to invector template style
+
+(Update 29/11/2017)
+- added mouse smoothing
+
+(Update 18/11/2017)
+- added compatibility to inVector FreeClimb Official Add-on
+
+(Update 02/11/2017)
+- updated to inVector Template Basic/Melee 2.2.4 & Shooter 1.1.4
+- fixed code replacement part in documentation.
+
+(Update 13/10/2017)
+- Bug fixes 
+
+(Update 11/10/2017)
+- updated to inVector Template Basic/Melee 2.2.3 & Shooter 1.1.3
+- added support for Camera Sway
+
+(Update 08/10/2017)
+- Updated to last version of Horse Animset Pro 3 integration
+- added "use cinematic on Action" to give camera control  to the animation during standard actions.
+- added "use cinematic on Request" to give camera control to the animation on request calling IsCinematic(true/false) method.
+
+(Update 19/09/2017)
+- Update to inVector Template Basic/Melee 2.2.2 & Shooter 1.1.2
+- small fixes and code optimization.
+
+(Update 11/09/2017)
+- small fixes and code optimization.
+
+(Update 04/09/2017)
+- new code solution for smooth shooter weapons movement.
+
+(Update 01/09/2017)
+- added a solution to limit lags during rotation with weapons
+
+(Update 31/08/2017)
+- Update to inVector Template Basic/Melee 2.2.1 & Shooter 1.1.1
+
+(Update 26/08/2017)
+- added a new configurable head collider with gizmos.
+
+(Update 24/08/2017)
+- fixed FistThirdCameraSwap issue.
+
+(Update 22/08/2017)
+- added Time Scale=zero check to correctly pause the scene.
+- fix little issue on swapping thirds camera when start smooth is enabled.
+
+(Update2 20/08/2017)
+- add compatibility (beta)to Malbers Horse AnimSet Pro Integration 
+(InvectorHAPLink.cs: add if(vCamera!=null) before each vCamera call)
+- add new sample scene and prefab.
+
+(Update 20/08/2017)
+- add compatibility to Invector ZipLine and Swimming addon
+- add new sample scenes and prefabs.
+
+(Update 19/08/2017)
+- Update to inVector Template Basic/Melee 2.2.0 & Shooter 1.1.0
+- add a best mouse clamp method.
+
+(Update 8/08/2017)
+- Update to inVector Template FREE 1.0b.
+
+(Update 7/08/2017)
+- added HeadTrack as required component.
+
+(Update 5/08/2017)
+- Update to inVector Template Basic/Melee 2.2D & Shooter 1.1D
+
+(Update 3/07/2017)
+- Update to inVector Template Basic/Melee 2.2C & Shooter 1.1C
+
+(Update 20/06/2017)
+- Fixed ragdolled issue
+- Reduce camera lags during actions
+- experimental mouse smoothness removed (not good enought)
+
+(Update 19/06/2017)
+- Added ability to set the body IK reactivity respect head rotation
+
+(Update 15/06/2017)
+- Code improvement to best use Template inputs.
+- Added "experimental" mouse smoothness (no good with melee actions).
+
+(Update 12/06/2017)
+- Fix random head jerky issue during actions.
+- general code cleaning
+
+(Update 08/06/2017)
+- some code optimization
+- disabled roll support due its incompatibility
+
+(Update 06/06/2017)
+- Shooter 1.1b and Melee 2.2b compatibility
+- Improved camera look smoothness
+
+(Update 04/06/2017)
+- Shooter 1.1b and Melee 2.2b compatibility
+
+(Update 04/06/2017)
+- Shooter 1.1a and Melee 2.2a compatibility
+
+(Update 29/05/2017)
+- Shooter 1.1 and Melee 2.2 compatibility
+
+(Update 12/04/2017)
+- fix jump jitter issue
+- code clearing and optimization
+
+(Update 10/04/2017)
+- adapted to work on all Invector Templates
+- Shooter: automatic instantiate "AimCanvas" at run-time (using Shooter option in inspector)
+
+(Update 24/03/2017)
+- return to separate packages (best compatibility) FREE and Basic/Melee
+- added basic / melee 2.1a compatibility 
+
+(Update 23/03/2017)
+- Now single package for all supported templates
+
+(Update 14/03/2017)
+- added public variables tool-tip
+- camera Swap: added option to select the default third camera strafe status after swapping.
+
+
+(Update 14/03/2017)
+
+- camera Swap: option to select the default camera strafe status
+
+(Update 13/03/2017)
+
+- added compatibility to Basic Locomotion 2.1
+- added "meleeDirectionalAction" option to align camera during mouse buttons input
+- splitted in two packages : free and Basic/Melee template
+- camera Swap: no more Template's code editing

@@ -1,0 +1,83 @@
+Content:
+----------------------------------------------------------------------------------------------------
+- vFirstPersonCamera.CS : The main script.
+- vFirstPersonCameraSwap.CS: (OPTIONAL) for ingame First/Third camera swap.
+- Demo scenes
+
+Instructions:
+----------------------------------------------------------------------------------------------------
+
+vFirstPersonCamera.CS
+***********************
+
+1 - drop the inVector Controller prefab on your scene ad add this script on it.
+2 - remove all ThirdCamera by invector in scene; add a new camera and set it as MainCamera (or add a custom camera in "PC Camera" field.
+3 - use the ContextMenu to set the camera in the right position.
+
+vFirstPersonCameraSwap
+***********************
+1 - add the vFirstPersonCameraSwap component to the player gameObject.
+2 - assign the third camera prefab in inspector
+
+
+Needed code modifications:
+
+
+
+*** SHOOTER *******************
+
+vShootermanager.CS
+----------------------
+For Camera Sway support replace line 473 and 474 with:
+
+if(tpCamera!=null) {
+vThirdPersonCamera.instance.offsetMouse = new Vector2(bx + tx,by + ty);
+} else {
+gameObject.SendMessage("SetOffset",new Vector2(bx + tx,by + ty),SendMessageOptions.DontRequireReceiver);
+}
+
+For Camera Recoil support replace line 441 with:
+
+if (tpCamera != null){
+tpCamera.RotateCamera(horizontal, up);
+}  else {
+gameObject.SendMessage("SetRecoil",new Vector2(horizontal,up),SendMessageOptions.DontRequireReceiver);
+} 
+
+and (to make swap working) add before void start():
+
+void CameraSwap(){
+tpCamera = FindObjectOfType<vThirdPersonCamera>();	
+}
+
+
+
+**** FreeClimb Add-on*************
+add freeclimb events (vFirstPersonCamera)isAction true/false for climb/unclimb
+
+vFreeClimb.cs code modification:
+
+replace line 140 with:
+
+if (dragInfo.inDrag && TP_Input.tpCamera!=null)
+
+
+
+
+**** Horse AnimSet Pro ****
+add Rider3rdPerson events isAction true/false for OnStartMounting/OnEndDismounting
+edit the Invector HAP Link component:
+
+add 
+
+if(vCamera !=null)
+
+before wherever it is used in the code
+
+
+and replace any 
+
+vCamera.transform with Camera.main.transform 
+
+wherever it is used in the code.
+

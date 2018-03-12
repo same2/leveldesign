@@ -5,13 +5,13 @@ using UnityEngine;
 public class PickUpObject : MonoBehaviour {
 
 	float throwForce = 600;
-
 	public bool canHold = true;
 	public GameObject item;
 	public GameObject tempParent;
 	public Transform guide;
 	public bool isHolding = false;
 	float distance;
+	Renderer rend;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +25,6 @@ public class PickUpObject : MonoBehaviour {
 
 		if (isHolding==true)
 		{
-
 			item.GetComponent<Rigidbody>().useGravity = false;
 			item.GetComponent<Rigidbody>().detectCollisions = true;
 			item.GetComponent<Rigidbody>().isKinematic = false;
@@ -61,6 +60,23 @@ public class PickUpObject : MonoBehaviour {
 	private void OnCollisionEnter(Collision collision)
 	{
 		isHolding = false;
+	}
+		
+	void OnMouseExit()
+	{
+		Renderer rend = GetComponent<Renderer>();
+		rend.material.color = Color.white;
+	}
+
+	void OnMouseOver()
+	{
+		if (distance <= 1.5f) {
+			Renderer rend = GetComponent<Renderer> ();
+			rend.material.color = Color.yellow;
+		} else {
+			Renderer rend = GetComponent<Renderer> ();
+			rend.material.color = Color.white;
+		}
 	}
 
 }﻿
