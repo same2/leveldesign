@@ -8,7 +8,7 @@
       <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\vThirdPersonCameraState.cs" Line="1" Column="1" />
       <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\vThirdPersonCamera.cs" Line="1" Column="1" />
       <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vPickupItem.cs" Line="1" Column="1" />
-      <File FileName="Assets\MyProject\Scripts\chase.cs" Line="1" Column="1" />
+      <File FileName="Assets\MyProject\Scripts\chase.cs" Line="8" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
