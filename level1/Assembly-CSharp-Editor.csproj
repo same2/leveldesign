@@ -142,37 +142,66 @@
      <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_MissingScriptEditor.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_Preferences.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_ScenePostProcessor.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\About\Editor\pg_AboutWindow.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_Editor.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_GridRenderer.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_ParameterWindow.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_Preferences.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_ToggleContent.cs" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
+     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
      <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
      <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\FPCameraAddon\Documentation\Doc.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\FPCameraAddonPackeges\_Install The Correct package.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
+     <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Invector-3rdPersonController\Add-ons\FreeClimb (Beta)\Animations\README.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\XInput\Plugins\MITLicense.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\AstarPathfindingProject\Readme.txt" />
      <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
+     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
+     <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
      <None Include="Assets\Invector-3rdPersonController\Basic Locomotion\README_Basic.txt" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader" />
@@ -249,6 +278,9 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>C:/Users/dninh/Documents/leveldesign/level1/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
  <Reference Include="XInputDotNetPure">
  <HintPath>C:/Users/dninh/Documents/leveldesign/level1/Assets/Invector-3rdPersonController/Basic Locomotion/Scripts/XInput/Plugins/x86/XInputDotNetPure.dll</HintPath>
  </Reference>
@@ -285,8 +317,11 @@
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Users/dninh/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
- <Reference Include="Pathfinding.Ionic.Zip.Reduced">
- <HintPath>C:/Users/dninh/Documents/leveldesign/level1/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ <Reference Include="TextMeshPro-2017.2-1.0.56-Runtime">
+ <HintPath>C:/Users/dninh/Documents/leveldesign/level1/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.2-1.0.56-Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.2-1.0.56-Editor">
+ <HintPath>C:/Users/dninh/Documents/leveldesign/level1/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.2-1.0.56-Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
