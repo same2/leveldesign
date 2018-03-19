@@ -9,8 +9,10 @@ using UnityEngine.AI;
 
 public class chase : MonoBehaviour {
 	public float trackingDistance = 10.0f; //How far ahead our gameObject can see 
+	public float trackingBox = 20.0f;
 	private float lookSpeed = 5.0f; //How fast our gameObject will rotate
 	public float stopDistance = 0.8f; //How far from our Target will our gameObject stop
+	public float stopDistanceBox = 10.0f;
 	//public float moveSpeed = 0.03f; //How fast our gameObject can move
 	public float lookAngle = 180.0f; //The radius our gameObject is able to see
 	private Animator anim; //We will need the Animator component attached to our gameObject // Use this for initialization
@@ -20,6 +22,8 @@ public class chase : MonoBehaviour {
 	public float movementspd = 5.0f;
 	public float accel  = 8.0f;
 	public float pSpeed = 0.01f;
+	public Transform obj1; 
+	public Transform obj2; 
 
 	string state = "patrol";
 	public GameObject[] waypoints;
@@ -37,6 +41,7 @@ public class chase : MonoBehaviour {
 
 		//Find the direction we wish to look at
 		Vector3 direction = Invector.vGameController.instance.currentPlayer.transform.position - this.transform.position;
+		Vector3 box = obj1.position - this.transform.position;
 		//Find the angle of our gameObject
 		float angle = Vector3.Angle(direction, this.transform.forward);
 		if(state == "patrol" && waypoints.Length > 0)
@@ -57,6 +62,7 @@ public class chase : MonoBehaviour {
 
 		}
 		//If the distance to our Target is less than our trackingDistance
+
 		if (Vector3.Distance(Invector.vGameController.instance.currentPlayer.transform.position, this.transform.position) < trackingDistance && angle < lookAngle)
 		{
 			state = "pursuing";
@@ -75,7 +81,7 @@ public class chase : MonoBehaviour {
 
 				anim.SetBool ("isWalking", true);
 				anim.SetBool ("isAttacking", false);
-			} 
+			}
 
 			else if (direction.magnitude < stopDistance) {
 
@@ -86,8 +92,38 @@ public class chase : MonoBehaviour {
 				if(timer >= timeBetweenAttacks){
 					hit();
 				}
-			} 
+			}
+				
 		}
+
+		/*
+		if player throw object
+			change tag 
+			make ai go to it
+			(after x time)
+			change time
+			ai go back normal
+		*/
+			/*
+		if (Vector3.Distance (obj1.position, this.transform.position) < trackingBox){
+			agent.SetDestination (GameObject.Find ("Cube (8)").transform.position);
+			agent.speed = movementspd;
+			agent.acceleration = accel;
+
+			anim.SetBool ("isWalking", true);
+			anim.SetBool ("isAttacking", false);
+			Debug.Log ("NOTHING");
+
+			if (direction.magnitude < stopDistanceBox) {
+				state = "patrol";
+				anim.SetBool ("isWalking", true);
+				anim.SetBool ("isAttacking", false);
+				Debug.Log ("TOUCHED");
+
+			}
+
+		}*/
+			
 
 		else {
 			state = "patrol";
