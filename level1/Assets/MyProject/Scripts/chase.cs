@@ -14,7 +14,7 @@ public class chase : MonoBehaviour {
 	public float stopDistance = 0.8f; //How far from our Target will our gameObject stop
 	public float stopDistanceBox = 0.8f;
 	//public float moveSpeed = 0.03f; //How fast our gameObject can move
-	public float lookAngle = 180.0f; //The radius our gameObject is able to see
+	public float lookAngle = 100.0f; //The radius our gameObject is able to see
 	private Animator anim; //We will need the Animator component attached to our gameObject // Use this for initialization
 	public int damage = -10;
 	private float timer;

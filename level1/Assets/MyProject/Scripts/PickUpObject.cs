@@ -25,6 +25,7 @@ public class PickUpObject : MonoBehaviour {
 
 		if (isHolding==true)
 		{
+			item.GetComponent<Rigidbody>().freezeRotation = true;
 			item.GetComponent<Rigidbody>().useGravity = false;
 			item.GetComponent<Rigidbody>().detectCollisions = true;
 			item.GetComponent<Rigidbody>().isKinematic = false;
@@ -32,6 +33,7 @@ public class PickUpObject : MonoBehaviour {
 			item.transform.position = guide.transform.position;
 			if (Input.GetMouseButtonDown(1))
 			{
+				item.GetComponent<Rigidbody>().freezeRotation = false;
 				item.GetComponent<Rigidbody>().AddForce(guide.transform.forward * throwForce);
 				isHolding = false;
 
@@ -39,6 +41,7 @@ public class PickUpObject : MonoBehaviour {
 		}
 		else
 		{
+			item.GetComponent<Rigidbody>().freezeRotation = false;
 			item.GetComponent<Rigidbody>().useGravity = true;
 			item.GetComponent<Rigidbody>().isKinematic = false;
 			item.transform.parent = null;
