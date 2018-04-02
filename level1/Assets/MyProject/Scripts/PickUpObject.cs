@@ -34,6 +34,7 @@ public class PickUpObject : MonoBehaviour {
 			{
 				item.GetComponent<Rigidbody>().AddForce(guide.transform.forward * throwForce);
 				isHolding = false;
+
 			}
 		}
 		else
