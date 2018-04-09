@@ -1,18 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MyProject\Scripts\PickUpObject.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MyProject\Scripts\chase.cs">
     <Files>
       <File FileName="Assets\MyProject\Scripts\Enemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\MyProject\Scripts\Key.cs" Line="22" Column="34" />
+      <File FileName="Assets\MyProject\Scripts\Key.cs" Line="1" Column="1" />
       <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\vThirdPersonCameraState.cs" Line="1" Column="1" />
       <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Camera\vThirdPersonCamera.cs" Line="1" Column="1" />
       <File FileName="Assets\Invector-3rdPersonController\Add-ons\FreeClimb (Beta)\Scripts\vCapsuleHelper.cs" Line="1" Column="1" />
       <File FileName="Assets\MyProject\Scripts\ButtonTest.cs" Line="1" Column="1" />
       <File FileName="Assets\Invector-3rdPersonController\Basic Locomotion\Scripts\Generic\vPickupItem.cs" Line="1" Column="1" />
       <File FileName="Assets\MyProject\Scripts\PickUpObject.cs" Line="32" Column="49" />
-      <File FileName="Assets\MyProject\Scripts\chase.cs" Line="17" Column="30" />
-      <File FileName="Assets\MyProject\Scripts\SoundObject.cs" Line="53" Column="57" />
-      <File FileName="Assets\MyProject\Scripts\Keycard.cs" Line="7" Column="28" />
+      <File FileName="Assets\MyProject\Scripts\chase.cs" Line="71" Column="89" />
+      <File FileName="Assets\MyProject\Scripts\SoundObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\MyProject\Scripts\Keycard.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
