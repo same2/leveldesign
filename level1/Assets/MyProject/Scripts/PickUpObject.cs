@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpObject : MonoBehaviour {
+	/*
 
-	float throwForce = 600;
 	public bool canHold = true;
 	public GameObject item;
 	public GameObject tempParent;
@@ -65,22 +65,86 @@ public class PickUpObject : MonoBehaviour {
 	{
 		isHolding = false;
 	}
-		
-	void OnMouseExit()
-	{
-		Renderer rend = GetComponent<Renderer>();
-		rend.material.color = Color.white;
+		*/
+
+	float throwForce = 600;
+	public Transform guide;
+	GameObject mainCamera;
+	bool carrying;
+	GameObject carriedObject;
+	public float distance;
+	public float smooth;
+	float maximumReachDistance = 3.0f;
+	// Use this for initialization
+
+	void Start () {
+		mainCamera = GameObject.FindWithTag("MainCamera");
 	}
 
-	void OnMouseOver()
-	{
-		if (distance <= 1.5f) {
-			Renderer rend = GetComponent<Renderer> ();
-			rend.material.color = Color.yellow;
+	// Update is called once per frame
+	void Update () {
+		if(carrying) {
+			carry(carriedObject);
+			checkDrop();
+			if (Input.GetMouseButtonDown (1)) {
+				throwObject ();
+			}
+			//rotateObject();
 		} else {
-			Renderer rend = GetComponent<Renderer> ();
-			rend.material.color = Color.white;
+			pickup();
 		}
 	}
+
+	void rotateObject() {
+		carriedObject.transform.Rotate(5,10,15);
+	}
+
+	void carry(GameObject o) {
+		o.transform.position = Vector3.Lerp (o.transform.position, mainCamera.transform.position + mainCamera.transform.forward * distance, Time.deltaTime * smooth);
+		o.transform.rotation = Quaternion.identity;
+		//o.GetComponent<Rigidbody>().isKinematic = true;﻿
+	}
+
+	void pickup() {
+		if(Input.GetKeyDown (KeyCode.E)) {
+			int x = Screen.width / 2;
+			int y = Screen.height / 2;
+
+			Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
+			RaycastHit hit;
+			if(Physics.Raycast(ray, out hit)) {
+				Pickable p = hit.collider.GetComponent<Pickable>();
+				if(p!=null && Physics.Raycast(ray, out hit, maximumReachDistance)) {
+					carrying = true;
+					carriedObject = p.gameObject;
+					//p.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+					p.gameObject.GetComponent<Rigidbody>().useGravity = false;
+				}
+			}
+		}
+	}
+
+	void checkDrop() {
+		if(Input.GetKeyDown (KeyCode.E)) {
+			dropObject();
+		}
+	}
+
+	void dropObject() {
+		carrying = false;
+		//carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+		carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;
+		carriedObject = null;
+	}
+
+	void throwObject(){
+		carrying = false;
+		//carriedObject.gameObject.GetComponent<Rigidbody>().freezeRotation = false;
+		//carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+		carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;
+		carriedObject.gameObject.GetComponent<Rigidbody>().AddForce(guide.transform.forward * throwForce);
+		carriedObject = null;
+	}
+
 
 }﻿
